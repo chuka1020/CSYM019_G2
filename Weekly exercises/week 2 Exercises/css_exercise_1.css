@@ -1,0 +1,26 @@
+
+h2 {
+    color: red;
+  }
+  
+ 
+  section p:first-child {
+    color: white;
+    background-color: black;
+  }
+  
+ *
+  .part2 p {
+    color: green;
+    background-color: darkred;
+  }
+  
+  .part3 p {
+    color: green;
+  }
+  
+  
+  .part4 p:not(:first-child) {
+    color: green;
+  }
+  
