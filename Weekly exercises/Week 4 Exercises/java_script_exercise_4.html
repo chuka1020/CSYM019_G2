@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Updating h1 and p Content</title>
+  <script>
+    function myLoadFunction() {
+      
+      let headingElement = document.createElement('h1');
+      headingElement.id = 'dynamicHeading'; 
+      headingElement.textContent = 'Initial Heading Text';
+      document.body.appendChild(headingElement);
+      headingElement.textContent = 'Updated Heading Text';
+
+      
+      let paragraphElement = document.createElement('p');
+      paragraphElement.id = 'dynamicParagraph';
+      paragraphElement.textContent = 'Initial Paragraph Text';
+      document.body.appendChild(paragraphElement);
+      paragraphElement.textContent = 'Updated Paragraph Text';
+    }
+
+    document.addEventListener("DOMContentLoaded", myLoadFunction); 
+  </script>
+</head>
+<body>
+</body>
+</html>
+
+
