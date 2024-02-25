@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selective Element Updates</title>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() { 
+      
+      let headingElement = document.createElement('h1');
+      headingElement.id = 'dynamicHeading'; 
+      headingElement.textContent = 'Initial Heading Text';
+      document.body.appendChild(headingElement);
+
+      
+      let paragraphElement = document.createElement('p');
+      paragraphElement.id = 'dynamicParagraph';
+      paragraphElement.textContent = 'Initial Paragraph Text';
+      document.body.appendChild(paragraphElement);
+
+    
+      headingElement.addEventListener('click', function() {
+        this.textContent = 'Updated Heading Text (Clicked!)'; 
+      });
+
+      
+      paragraphElement.addEventListener('click', function() {
+        this.textContent = 'Updated Paragraph Text (Clicked!)';
+      });
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>

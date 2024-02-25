@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Updating h1 and p on Click</title>
+  <script>
+    function updateContent() {
+      
+      let headingElement = document.getElementById('dynamicHeading'); 
+      headingElement.textContent = 'Updated Heading Text (Clicked!)';
+
+      
+      let paragraphElement = document.getElementById('dynamicParagraph');
+      paragraphElement.textContent = 'Updated Paragraph Text (Clicked!)';
+    }
+
+    window.addEventListener('DOMContentLoaded', function() { // DOMContentLoaded still needed for initial setup
+      
+      let headingElement = document.createElement('h1');
+      headingElement.id = 'dynamicHeading'; 
+      headingElement.textContent = 'Initial Heading Text';
+      document.body.appendChild(headingElement);
+
+      
+      let paragraphElement = document.createElement('p');
+      paragraphElement.id = 'dynamicParagraph';
+      paragraphElement.textContent = 'Initial Paragraph Text';
+      document.body.appendChild(paragraphElement);
+
+      
+      headingElement.addEventListener('click', updateContent);
+    });
+  </script>
+</head>
+<body>
+</body>
+</html>
